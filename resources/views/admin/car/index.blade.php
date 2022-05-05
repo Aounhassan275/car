@@ -29,7 +29,7 @@
                     <tr> 
                         <td>{{$key+1}}</td>
                         <td>{{$car->name}}</td>
-                        <td>{{$car->price}}</td>
+                        <td>¥{{$car->price}}</td>
                         <td>{{$car->category->name}}</td>
                         <td>{{$car->make->name}}</td>
                         <td class="table-action">

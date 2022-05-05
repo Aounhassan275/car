@@ -17,19 +17,27 @@
                     @method('PUT')
                     @csrf
                    <div class="row">
-                        <div class="form-group col-3">
-                            <label class="form-label">Website / Owner Name</label>
+                        <div class="form-group col-4">
+                            <label class="form-label">Website Name</label>
                             <input type="text" name="name" class="form-control" placeholder="Owner Name" value="{{@$setting->name}}">
                         </div>
-                        <div class="form-group col-3">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-control" required placeholder="Address" value="{{@$setting->email}}">
+                        <div class="form-group col-4">
+                            <label class="form-label">Owner Name</label>
+                            <input type="text" name="owner_name" class="form-control" placeholder="Owner Name" value="{{@$setting->owner_name}}">
                         </div>
-                        <div class="form-group col-3">
+                        <div class="form-group col-4">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="email" class="form-control" required placeholder="Email Address" value="{{@$setting->email}}">
+                        </div>
+                        <div class="form-group col-4">
                             <label class="form-label">Phone</label>
                             <input type="text" name="phone" class="form-control" required placeholder="Phone" value="{{@$setting->phone}}">
                         </div>
-                        <div class="form-group col-3">
+                        <div class="form-group col-4">
+                            <label class="form-label">Line Barcode Image</label>
+                            <input type="file" name="image" class="form-control" required placeholder="Address" value="{{@$setting->address}}">
+                        </div>
+                        <div class="form-group col-4">
                             <label class="form-label">Address</label>
                             <input type="text" name="address" class="form-control" required placeholder="Address" value="{{@$setting->address}}">
                         </div>
@@ -72,6 +80,18 @@
                         <div class="form-group col-4">
                             <label class="form-label">Facebook</label>
                             <input type="text" class="form-control" required name="facebook_link"   placeholder="Facebook Url" value="{{@$setting->facebook_link}}">
+                        </div>
+                        <div class="form-group col-4">
+                            <label class="form-label">Youtube</label>
+                            <input type="text" class="form-control" required name="youtube_link"   placeholder="Youtube Url" value="{{@$setting->youtube_link}}">
+                        </div>  
+                        <div class="form-group col-4">
+                            <label class="form-label">Tiktok</label>
+                            <input type="text" class="form-control" required name="tiktok_link"   placeholder="Tiktok Url" value="{{@$setting->tiktok_link}}">
+                        </div>
+                        <div class="form-group col-4">
+                            <label class="form-label">Whatsapp</label>
+                            <input type="text" class="form-control" required name="whatsapp_link"   placeholder="Whatsapp Url" value="{{@$setting->whatsapp_link}}">
                         </div>
                     </div>
                     <div class="text-right">

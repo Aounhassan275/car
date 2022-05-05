@@ -26,7 +26,7 @@
 
                         <br>
 
-                        <h2>${{$car->price}}</h2>
+                        <h2>¥{{$car->price}}</h2>
                     </div>
                 </div>
 
@@ -119,7 +119,7 @@
 
                     <p>
                         @if($car->air_conditioning)
-                        - Air Conditioning<br>
+                        - Chilled Air Conditioner<br>
                         @endif
                         @if($car->power_window)
                         - Power Window<br>
@@ -131,7 +131,7 @@
                         - Central Locking<br>
                         @endif
                         @if($car->airbag)
-                        - Airbag<br>
+                        - Airbag front and side airbags<br>
                         @endif
                         @if($car->anti_theft_system)
                         - Anti Theft System<br>
@@ -140,21 +140,93 @@
                         - Power Steering<br>
                         @endif
                         @if($car->anti_brake_system)
-                        - Anti Brake System<br>
+                        - Anti Brake System (ABS)<br>
                         @endif
                         @if($car->tv)
-                        - TV<br>
+                        - HD TV / Roof TV<br>
+                        @endif
+                        @if($car->trip_speedometer)
+                        - Trip Speedometer<br>
+                        @endif
+                        @if($car->speedometer_light)
+                        - Speedo Meter Display Light Adjustment<br>
+                        @endif
+                        @if($car->front_headlights_button)
+                        - Front Headlights Adjustment Option Button<br>
+                        @endif
+                        @if($car->vehicle_assist)
+                        - Vehicle Assist<br>
+                        @endif
+                        @if($car->eco_mode_engine)
+                        - ECO Mode Engine<br>
+                        @endif
+                        @if($car->hd_navigation)
+                        - HD Navigation<br>
+                        @endif
+                        @if($car->handle_right)
+                        - Handle Right Handle<br>
+                        @endif
+                        @if($car->aux)
+                        - Aux / Bluetooth / Wifi / FM,AM / Disc / MSV / IPOD Connectivity / USB / HDMI / Walkman<br>
+                        @endif
+                        @if($car->alloy_wheels)
+                        - Beautiful Alloy Wheels<br>
+                        @endif
+                        @if($car->new_tires_sport)
+                        - New Tires Sports Type<br>
+                        @endif
+                        @if($car->car_navigation)
+                        - Car Navigation + Multimedia System<br>
+                        @endif
+                        @if($car->back_monitor_camera)
+                        - Back Monitor Camera<br>
+                        @endif
+                        @if($car->fresh_interior)
+                        - Fresh Interior<br>
+                        @endif
+                        @if($car->neat_clean_seats)
+                        - Beautiful Neat Clean Seats<br>
+                        @endif
+                        @if($car->dvd_options)
+                        - DVD Options<br>
+                        @endif
+                        @if($car->remote_entry)
+                        - Remote Entry<br>
+                        @endif
+                        @if($car->discharged_lamp)
+                        - Discharged Lamp<br>
+                        @endif
+                        @if($car->aluminum_foil)
+                        - Aluminum Foil<br>
+                        @endif
+                        @if($car->drive_system)
+                        - Drive system 2WD<br>
+                        @endif
+                        @if($car->power_outlet)
+                        - Power Outlet<br>
+                        @endif
+                        @if($car->video_input)
+                        - Video Input<br>
+                        @endif
+                        @if($car->tyres_condition)
+                        - Excellent Tyres Condition<br>
+                        @endif
+                        @if($car->exterior_and_interior_condition)
+                        - Exterior and Interior both is in very neat clean<br>
                         @endif
                         {!! $car->description !!}
                     </p>
                 </section>
 
                 <section class="split">
+                    @php 
+                    $owner = App\Models\Setting::first();
+                    @endphp
                     <section>
                         <div class="contact-method">
                             <span class="icon alt fa-user"></span>
                             <h3>Name</h3>
-                            <span>John Smith</span>
+                            <span>{{@$owner->owner_name}}</span>
                         </div>
                     </section>
 
@@ -162,24 +234,25 @@
                         <div class="contact-method">
                             <span class="icon alt fa-envelope"></span>
                             <h3>Email</h3>
-                            <a href="#">contact@company.com</a>
+                            <a href="mailto:{{@$owner->email}}">{{@$owner->email}}</a>
                         </div>
                     </section>
                     <section>
                         <div class="contact-method">
                             <span class="icon alt fa-phone"></span>
                             <h3>Phone</h3>
-                            <span>+1 333 4040 5566</span>
+                            <a href="tel:{{@$owner->phone}}">{{@$owner->phone}}</a>
+                            {{-- <span>+1 333 4040 5566</span> --}}
                         </div>
                     </section>
 
-                    <section>
+                    {{-- <section>
                         <div class="contact-method">
                             <span class="icon alt fa-phone"></span>
                             <h3>Mobile Phone</h3>
                             <span>+1 333 5550 3366</span>
                         </div>
-                    </section>
+                    </section> --}}
                 </section>
             </div>
         </section>

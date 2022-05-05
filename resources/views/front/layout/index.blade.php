@@ -13,10 +13,12 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-			
+				@php 
+				$site_setting = App\Models\Setting::first();
+				@endphp
 				<!-- Header -->
 				<header id="header" class="alt">
-					<a href="{{url('/')}}" class="logo"><strong>Car Dealer</strong> <span>Website</span></a>
+					<a href="{{url('/')}}" class="logo"><strong>{{@$site_setting->name}}</strong> <span>Website</span></a>
 					<nav>
 						<a href="#menu">Menu</a>
 					</nav>
@@ -46,18 +48,39 @@
 				<footer id="footer">
 					<div class="inner">
 						<ul class="icons">
-							<li><a href="{{@$setting->twitter_link}}" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="{{@$setting->facebook_link}}" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="{{@$setting->instagram_link}}" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-							{{-- <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li> --}}
+							<li><a href="{{@$setting->twitter_link}}" target="_blank" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="{{@$setting->facebook_link}}" target="_blank" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="{{@$setting->instagram_link}}" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="{{@$setting->whatsapp_link}}" target="_blank" class="icon alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+							<li><a href="{{@$setting->youtube_link}}"  target="_blank"class="icon alt fa-youtube"><span class="label">Youtube</span></a></li>
+						</ul>
+						<ul class="icons">	
+							<li><a data-toggle="modal" data-target="#line_modal"><img height="50" width="50" src="{{asset('front/assets/fonts/line.png')}}" alt=""></a></li>
+							<li><a href="{{@$setting->tiktok_link}}" target="_blank" class=""><img height="50" width="50" src="{{asset('front/assets/fonts/tiktok.png')}}" alt=""></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>Copyright © 2022 Reserved by:</li>
-							<li> <a href="{{url('/')}}">CarDealer.com</a></li>
+							<li> <a href="{{url('/')}}">Paklandkk.com</a></li>
 						</ul>
 					</div>
 				</footer>
-
+				<div id="line_modal" class="modal fade">
+					<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									{{-- <h5 class="modal-title mt-0" id="myModalLabel">Line Barcode</h5> --}}
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								</div>
+								<div class="modal-body text-center">
+									<p>Line Barcode:</p>
+									<img src="{{@$setting->image}}" height="100" width="100" alt="">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+								</div>
+							</div>
+					</div>
+				</div>
 			</div>
 
 		<!-- Scripts -->

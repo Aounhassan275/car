@@ -27,7 +27,7 @@
 
                 <h3>{{$car->name}}</h3>
 
-                <p> <strong> ${{$car->price}}</strong></p>
+                <p> <strong> ¥{{$car->price}}</strong></p>
 
                 <p>{{$car->chassis_no}}  /  {{$car->fuel_type}}  /  {{$car->year}}  /  {{$car->condition}} vehicle</p>
 

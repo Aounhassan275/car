@@ -126,7 +126,7 @@
                    <h3>Extra Features</h3>
                    <div class="row">
                         <div class="form-group col-3">
-                            <label><input type="checkbox" @if($car->air_conditioning) checked @endif name="air_conditioning"> Air Conditioning</label>
+                            <label><input type="checkbox" @if($car->air_conditioning) checked @endif name="air_conditioning"> Chilled Air Conditioner</label>
                         </div>
                         <div class="form-group col-3">
                             <label><input type="checkbox" @if($car->power_window) checked @endif name="power_window"> Power Window</label>
@@ -138,7 +138,7 @@
                             <label><input type="checkbox" @if($car->central_locking) checked @endif name="central_locking"> Central Locking</label>
                         </div>
                         <div class="form-group col-3">
-                            <label><input type="checkbox" @if($car->airbag) checked @endif name="airbag"> Air Bag</label>
+                            <label><input type="checkbox" @if($car->airbag) checked @endif name="airbag"> Airbag front and side airbags</label>
                         </div>
                         <div class="form-group col-3">
                             <label><input type="checkbox" @if($car->anti_theft_system) checked @endif name="anti_theft_system"> Anti Theft System</label>
@@ -147,10 +147,79 @@
                             <label><input type="checkbox" @if($car->power_steering) checked @endif name="power_steering"> Power Steering</label>
                         </div>
                         <div class="form-group col-3">
-                            <label><input type="checkbox" @if($car->anti_brake_system) checked @endif name="anti_brake_system"> Anti Brake System</label>
+                            <label><input type="checkbox" @if($car->anti_brake_system) checked @endif name="anti_brake_system"> Anti Brake System (ABS)</label>
                         </div>
                         <div class="form-group col-3">
-                            <label><input type="checkbox" @if($car->tv) checked @endif name="tv"> TV</label>
+                            <label><input type="checkbox" @if($car->tv) checked @endif name="tv"> HD TV / Roof TV</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->trip_speedometer) checked @endif name="trip_speedometer"> Trip Speedometer</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->speedometer_light) checked @endif name="speedometer_light"> Speedo Meter Display Light Adjustment </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->front_headlights_button) checked @endif name="front_headlights_button"> Front Headlights Adjustment Option Button </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->vehicle_assist) checked @endif name="vehicle_assist"> Vehicle Assist </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->eco_mode_engine) checked @endif name="eco_mode_engine"> ECO Mode Engine </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->hd_navigation) checked @endif name="hd_navigation"> HD Navigation </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->handle_right) checked @endif name="handle_right"> Handle Right Handle </label>
+                        </div>
+                        <div class="form-group col-9">
+                            <label><input type="checkbox" @if($car->aux) checked @endif name="aux"> Aux / Bluetooth / Wifi / FM,AM / Disc / MSV / IPOD Connectivity / USB / HDMI / Walkman </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->alloy_wheels) checked @endif name="alloy_wheels"> Beautiful Alloy Wheels </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->new_tires_sport) checked @endif name="new_tires_sport"> New Tires Sports Type </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->car_navigation) checked @endif name="car_navigation"> Car Navigation + Multimedia System </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->back_monitor_camera) checked @endif name="back_monitor_camera"> Back Monitor Camera </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->fresh_interior) checked @endif name="fresh_interior"> Fresh Interior  </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->neat_clean_seats) checked @endif name="neat_clean_seats"> Beautiful Neat Clean Seats  </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->dvd_options) checked @endif name="dvd_options"> DVD Options   </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->remote_entry) checked @endif name="remote_entry"> Remote Entry   </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->discharged_lamp) checked @endif name="discharged_lamp"> Discharged Lamp   </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->aluminum_foil) checked @endif name="aluminum_foil"> Aluminum Foil</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->drive_system) checked @endif name="drive_system"> Drive system 2WD</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->power_outlet) checked @endif name="power_outlet"> Power Outlet</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->video_input) checked @endif name="video_input"> Video Input </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" @if($car->tyres_condition) checked @endif name="tyres_condition"> Excellent Tyres Condition </label>
+                        </div>
+                        <div class="form-group col-6">
+                            <label><input type="checkbox" @if($car->exterior_and_interior_condition) checked @endif name="exterior_and_interior_condition"> Exterior and Interior both is in very neat clean </label>
                         </div>
                    </div>
                     <div class="text-right">

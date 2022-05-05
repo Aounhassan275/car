@@ -128,7 +128,7 @@
                    <h3>Extra Features</h3>
                    <div class="row">
                         <div class="form-group col-3">
-                            <label><input type="checkbox" name="air_conditioning"> Air Conditioning</label>
+                            <label><input type="checkbox" name="air_conditioning"> Chilled Air Conditioner</label>
                         </div>
                         <div class="form-group col-3">
                             <label><input type="checkbox" name="power_window"> Power Window</label>
@@ -140,10 +140,10 @@
                             <label><input type="checkbox" name="central_locking"> Central Locking</label>
                         </div>
                         <div class="form-group col-3">
-                            <label><input type="checkbox" name="airbag"> Air Bag</label>
+                            <label><input type="checkbox" name="airbag"> Airbag front and side airbags</label>
                         </div>
                         <div class="form-group col-3">
-                            <label><input type="checkbox" name="anti_theft_system"> Anti Theft System</label>
+                            <label><input type="checkbox" name="anti_theft_system"> Anti Theft System (ABS)</label>
                         </div>
                         <div class="form-group col-3">
                             <label><input type="checkbox" name="power_steering"> Power Steering</label>
@@ -152,7 +152,76 @@
                             <label><input type="checkbox" name="anti_brake_system"> Anti Brake System</label>
                         </div>
                         <div class="form-group col-3">
-                            <label><input type="checkbox" name="tv"> TV</label>
+                            <label><input type="checkbox" name="tv"> HD TV / Roof TV</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="trip_speedometer"> Trip Speedometer</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="speedometer_light"> Speedo Meter Display Light Adjustment </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="front_headlights_button"> Front Headlights Adjustment Option Button </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="vehicle_assist"> Vehicle Assist </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="eco_mode_engine"> ECO Mode Engine </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="hd_navigation"> HD Navigation </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="handle_right"> Handle Right Handle </label>
+                        </div>
+                        <div class="form-group col-9">
+                            <label><input type="checkbox" name="aux"> Aux / Bluetooth / Wifi / FM,AM / Disc / MSV / IPOD Connectivity / USB / HDMI / Walkman </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="alloy_wheels"> Beautiful Alloy Wheels </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="new_tires_sport"> New Tires Sports Type </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="car_navigation"> Car Navigation + Multimedia System </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="back_monitor_camera"> Back Monitor Camera </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="fresh_interior"> Fresh Interior  </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="neat_clean_seats"> Beautiful Neat Clean Seats  </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="dvd_options"> DVD Options   </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="remote_entry"> Remote Entry   </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="discharged_lamp"> Discharged Lamp   </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="aluminum_foil"> Aluminum Foil</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="drive_system"> Drive system 2WD</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="power_outlet"> Power Outlet</label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="video_input"> Video Input </label>
+                        </div>
+                        <div class="form-group col-3">
+                            <label><input type="checkbox" name="tyres_condition"> Excellent Tyres Condition </label>
+                        </div>
+                        <div class="form-group col-6">
+                            <label><input type="checkbox" name="exterior_and_interior_condition"> Exterior and Interior both is in very neat clean </label>
                         </div>
                    </div>
                     <div class="text-right">
