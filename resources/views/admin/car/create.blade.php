@@ -108,6 +108,7 @@
                             <label class="form-label">Car Fuel Type</label><br>
                             <input type="radio" name="fuel_type" value="Petrol" > Petrol 
                             <input type="radio" name="fuel_type" value="Desiel"> Desiel  
+                            <input type="radio" name="fuel_type" value="Hybrid"> Hybrid  
                         </div>
                         <div class="form-group col-3">
                             <label class="form-label">Car Transmission</label><br>

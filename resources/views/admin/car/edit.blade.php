@@ -110,6 +110,7 @@
                             <label class="form-label">Car Fuel Type</label><br>
                             <input type="radio" name="fuel_type" @if(@$car->fuel_type == "Petrol") checked @endif value="Petrol" > Petrol 
                             <input type="radio" name="fuel_type" @if(@$car->fuel_type == "Desiel") checked @endif value="Desiel"> Desiel  
+                            <input type="radio" name="fuel_type" @if(@$car->fuel_type == "Hybrid") checked @endif value="Hybrid"> Hybrid  
                         </div>
                         <div class="form-group col-3">
                             <label class="form-label">Car Transmission</label><br>
