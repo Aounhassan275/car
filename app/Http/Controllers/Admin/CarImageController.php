@@ -36,7 +36,14 @@ class CarImageController extends Controller
      */
     public function store(Request $request)
     {
-        CarImage::create($request->all());
+        // CarImage::create($request->all());
+        foreach($request->images as $image)
+        {
+            CarImage::create([
+                'image' => $image,
+                'car_id' => $request->car_id
+            ]);
+        }
         toastr()->success('Car  Image is Created Successfully');
         return redirect()->back();
     }

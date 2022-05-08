@@ -287,7 +287,7 @@
                     <div class="form-group">
                         <label for="title">Car Image</label>
                         <input class="form-control" type="hidden"  name="car_id" value="{{$car->id}}">
-                        <input class="form-control" type="file" name="image">
+                        <input class="form-control" type="file" multiple name="images[]">
                     </div>
                 </div>
                 <div class="modal-footer">
