@@ -1,6 +1,6 @@
 @extends('front.layout.index')
 @section('title')
-<title>{{$car->name}} | CAR DEALER</title>
+<title>{{@$car->name}} | CAR DEALER</title>
 @endsection
 @section('contents')
 <div id="main" class="alt">
@@ -9,24 +9,24 @@
         <section id="one">
             <div class="inner">
                 <header class="major">
-                    <h1>{{$car->name}} ({{$car->country->name}})</h1>
+                    <h1>{{@$car->name}} ({{@$car->country->name}})</h1>
                 </header>
 
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="{{$car->images->first()->image}}" class="img-responsive" alt="">
+                        <img src="{{@$car->images->first()->image}}" class="img-responsive" alt="">
                     </div>
 
                     <div class="col-md-6">
                         <div class="row">
-                            @foreach($car->images as $image)
+                            @foreach(@$car->images as $image)
                             <div class="col-md-4 col-xs-6"><img src="{{asset($image->image)}}" class="img-responsive" alt=""></div>
                             @endforeach
                         </div>
 
                         <br>
 
-                        <h2>¥{{$car->price}}</h2>
+                        <h2>¥{{@$car->price}}</h2>
                     </div>
                 </div>
 
@@ -37,73 +37,73 @@
                         <div class="field quarter">
                             <label>Type</label>
                              
-                            <input type="text" readonly value="{{$car->condition}}">
+                            <input type="text" readonly value="{{@$car->condition}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Make</label>
                              
-                            <input type="text" readonly value="{{$car->make->name}}">
+                            <input type="text" readonly value="{{@$car->make->name}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Model</label>
                              
-                            <input type="text" readonly value="{{$car->category->name}}">
+                            <input type="text" readonly value="{{@$car->category->name}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Manufacture Year</label>
                              
-                            <input type="text" readonly value="{{$car->year}}">
+                            <input type="text" readonly value="{{@$car->year}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Mileage</label>
                              
-                            <input type="text" readonly value="{{$car->mileage}}">
+                            <input type="text" readonly value="{{@$car->mileage}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Fuel</label>
                              
-                            <input type="text" readonly value="{{$car->fuel_type}}">
+                            <input type="text" readonly value="{{@$car->fuel_type}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Engine size</label>
                              
-                            <input type="text" readonly value="{{$car->engine}}">
+                            <input type="text" readonly value="{{@$car->engine}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Chasis No.</label>
                              
-                            <input type="text" readonly value="{{$car->chassis_no}}">
+                            <input type="text" readonly value="{{@$car->chassis_no}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Gearbox</label>
                              
-                            <input type="text" readonly value="{{$car->transmission}}">
+                            <input type="text" readonly value="{{@$car->transmission}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Type</label>
                              
-                            <input type="text" readonly value="{{@$car->type->name}}">
+                            <input type="text" readonly value="{{@@$car->type->name}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Exterior Color</label>
                              
-                            <input type="text" readonly value="{{$car->exterior_color}}">
+                            <input type="text" readonly value="{{@$car->exterior_color}}">
                         </div>
 
                         <div class="field quarter">
                             <label>Interior Color</label>
                              
-                            <input type="text" readonly value="{{$car->interior_color}}">
+                            <input type="text" readonly value="{{@$car->interior_color}}">
                         </div>
                     </div>
                 </form>
@@ -118,103 +118,103 @@
                     </header>
 
                     <p>
-                        @if($car->air_conditioning)
+                        @if(@$car->air_conditioning)
                         - Chilled Air Conditioner<br>
                         @endif
-                        @if($car->power_window)
+                        @if(@$car->power_window)
                         - Power Window<br>
                         @endif
-                        @if($car->power_mirror)
+                        @if(@$car->power_mirror)
                         - Power Mirror<br>
                         @endif
-                        @if($car->central_locking)
+                        @if(@$car->central_locking)
                         - Central Locking<br>
                         @endif
-                        @if($car->airbag)
+                        @if(@$car->airbag)
                         - Airbag front and side airbags<br>
                         @endif
-                        @if($car->anti_theft_system)
+                        @if(@$car->anti_theft_system)
                         - Anti Theft System<br>
                         @endif
-                        @if($car->power_steering)
+                        @if(@$car->power_steering)
                         - Power Steering<br>
                         @endif
-                        @if($car->anti_brake_system)
+                        @if(@$car->anti_brake_system)
                         - Anti Brake System (ABS)<br>
                         @endif
-                        @if($car->tv)
+                        @if(@$car->tv)
                         - HD TV / Roof TV<br>
                         @endif
-                        @if($car->trip_speedometer)
+                        @if(@$car->trip_speedometer)
                         - Trip Speedometer<br>
                         @endif
-                        @if($car->speedometer_light)
+                        @if(@$car->speedometer_light)
                         - Speedo Meter Display Light Adjustment<br>
                         @endif
-                        @if($car->front_headlights_button)
+                        @if(@$car->front_headlights_button)
                         - Front Headlights Adjustment Option Button<br>
                         @endif
-                        @if($car->vehicle_assist)
+                        @if(@$car->vehicle_assist)
                         - Vehicle Assist<br>
                         @endif
-                        @if($car->eco_mode_engine)
+                        @if(@$car->eco_mode_engine)
                         - ECO Mode Engine<br>
                         @endif
-                        @if($car->hd_navigation)
+                        @if(@$car->hd_navigation)
                         - HD Navigation<br>
                         @endif
-                        @if($car->handle_right)
+                        @if(@$car->handle_right)
                         - Handle Right Handle<br>
                         @endif
-                        @if($car->aux)
+                        @if(@$car->aux)
                         - Aux / Bluetooth / Wifi / FM,AM / Disc / MSV / IPOD Connectivity / USB / HDMI / Walkman<br>
                         @endif
-                        @if($car->alloy_wheels)
+                        @if(@$car->alloy_wheels)
                         - Beautiful Alloy Wheels<br>
                         @endif
-                        @if($car->new_tires_sport)
+                        @if(@$car->new_tires_sport)
                         - New Tires Sports Type<br>
                         @endif
-                        @if($car->car_navigation)
+                        @if(@$car->car_navigation)
                         - Car Navigation + Multimedia System<br>
                         @endif
-                        @if($car->back_monitor_camera)
+                        @if(@$car->back_monitor_camera)
                         - Back Monitor Camera<br>
                         @endif
-                        @if($car->fresh_interior)
+                        @if(@$car->fresh_interior)
                         - Fresh Interior<br>
                         @endif
-                        @if($car->neat_clean_seats)
+                        @if(@$car->neat_clean_seats)
                         - Beautiful Neat Clean Seats<br>
                         @endif
-                        @if($car->dvd_options)
+                        @if(@$car->dvd_options)
                         - DVD Options<br>
                         @endif
-                        @if($car->remote_entry)
+                        @if(@$car->remote_entry)
                         - Remote Entry<br>
                         @endif
-                        @if($car->discharged_lamp)
+                        @if(@$car->discharged_lamp)
                         - Discharged Lamp<br>
                         @endif
-                        @if($car->aluminum_foil)
+                        @if(@$car->aluminum_foil)
                         - Aluminum Foil<br>
                         @endif
-                        @if($car->drive_system)
+                        @if(@$car->drive_system)
                         - Drive system 2WD<br>
                         @endif
-                        @if($car->power_outlet)
+                        @if(@$car->power_outlet)
                         - Power Outlet<br>
                         @endif
-                        @if($car->video_input)
+                        @if(@$car->video_input)
                         - Video Input<br>
                         @endif
-                        @if($car->tyres_condition)
+                        @if(@$car->tyres_condition)
                         - Excellent Tyres Condition<br>
                         @endif
-                        @if($car->exterior_and_interior_condition)
+                        @if(@$car->exterior_and_interior_condition)
                         - Exterior and Interior both is in very neat clean<br>
                         @endif
-                        {!! $car->description !!}
+                        {!! @$car->description !!}
                     </p>
                 </section>
 
