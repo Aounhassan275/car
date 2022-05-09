@@ -9,7 +9,7 @@
         <section id="one">
             <div class="inner">
                 <header class="major">
-                    <h1>{{@$car->name}} ({{@$car->country->name}})</h1>
+                    <h1 @if($car->sold_out) style="color:red;"@endif>{{@$car->name}} ({{@$car->country->name}}) @if($car->sold_out) - SOLD OUT @endif</h1>
                 </header>
 
                 <div class="row">

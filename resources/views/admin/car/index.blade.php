@@ -20,6 +20,8 @@
                         <th style="width:auto;">Car Price</th>
                         <th style="width:auto;">Car Make</th>
                         <th style="width:auto;">Car Model</th>
+                        <th style="width:auto;">Car Status</th>
+                        <th style="width:auto;">Action</th>
                         <th style="width:auto;">Action</th>
                         <th style="width:auto;">Action</th>
                     </tr>
@@ -32,6 +34,20 @@
                         <td>¥{{$car->price}}</td>
                         <td>{{$car->category->name}}</td>
                         <td>{{$car->make->name}}</td>
+                        <td>
+                            @if($car->sold_out)
+                            <span class="badge badge-success">Sold Out</span>
+                            @else 
+                            <span class="badge badge-warning">Active</span>
+                            @endif
+                        </td>
+                        <td class="table-action">
+                            @if($car->sold_out)
+                            <a href="{{route('admin.car.active',$car->id)}}" style="color:white;" class="btn btn-warning">Make Active</a>
+                            @else
+                            <a href="{{route('admin.car.sold_out',$car->id)}}" style="color:white;" class="btn btn-primary">Sold Out</a>
+                            @endif
+                        </td>
                         <td class="table-action">
                             <a href="{{route('admin.car.edit',$car->id)}}"><i class="align-middle" data-feather="edit-2"></i></a>
                         </td>

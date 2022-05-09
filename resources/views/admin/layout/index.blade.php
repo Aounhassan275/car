@@ -120,6 +120,11 @@
 							<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Profile</span>
 						</a>
 					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="{{url('/')}}">
+							<i class="align-middle" data-feather="globe"></i> <span class="align-middle">Car Frontend</span>
+						</a>
+					</li>
 				</ul>
 
 				<div class="sidebar-bottom d-none d-lg-block">

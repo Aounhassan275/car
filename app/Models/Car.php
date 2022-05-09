@@ -34,6 +34,7 @@ class Car extends Model
         'video_input',
         'tyres_condition',
         'exterior_and_interior_condition',
+        'sold_out',
     ];
     public function make()
     {

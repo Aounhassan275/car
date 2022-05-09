@@ -61,14 +61,14 @@
 					<img src="{{asset(@$car->images->first()->image)}}" alt="" />
 				</span>
 
-				<header class="major">
+				<header class="major" @if($car->sold_out)style="color:red;"@endif>
 					<p>
 						<i class="fa fa-dashboard"></i> {{$car->mileage}} &nbsp;&nbsp;
 						<i class="fa fa-cube"></i> {{$car->engine}}&nbsp;&nbsp;
 						<i class="fa fa-cog"></i> {{@$car->transmission}}
 					</p>
 
-					<h3>{{$car->name}}</h3>
+					<h3 >{{$car->name}}</h3>
 
 					<p> <strong> ¥{{$car->price}}</strong></p>
 
@@ -77,7 +77,9 @@
 					
 
 					<div class="major-actions">
-						<a href="{{route('cars.show',str_replace(' ', '_',$car->name))}}" class="button small next">View Car</a>
+						<a href="{{route('cars.show',str_replace(' ', '_',$car->name))}}"@if($car->sold_out)style="color:red;"  class="button"@else class="button small next"@endif>
+							{{$car->sold_out?"Sold Out":'View Car'}}
+						</a>
 					</div>
 				</header>
 			</article>

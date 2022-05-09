@@ -174,6 +174,24 @@ class CarController extends Controller
         toastr()->success('Car Informations Deleted successfully');
         return redirect()->back();
     }
+    public function soldOut($id)
+    {
+        $car = Car::find($id);
+        $car->update([
+            'sold_out' => true
+        ]);
+        toastr()->success('Car Sold Out Successfully');
+        return redirect()->back();
+    }
+    public function active($id)
+    {
+        $car = Car::find($id);
+        $car->update([
+            'sold_out' => false
+        ]);
+        toastr()->success('Car is avaiable for Sale Now');
+        return redirect()->back();
+    }
     public function getCarModels(Request $request)
     {
         if($request->id == 'all'){

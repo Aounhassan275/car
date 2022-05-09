@@ -29,6 +29,8 @@ Route::group(['prefix' => 'admin', 'as'=>'admin.','namespace' => 'Admin'], funct
       Route::resource('admin', 'AdminController');    
     /******************CAR ROUTES****************/
       Route::post('car/get_car_models', 'CarController@getCarModels')->name('car.models');     
+      Route::get('car/sold_out/{id}', 'CarController@soldOut')->name('car.sold_out');     
+      Route::get('car/make_active/{id}', 'CarController@active')->name('car.active');     
       Route::resource('car', 'CarController');     
     /******************CAR MODEL ROUTES****************/
       Route::resource('car_model', 'CarModelController');
