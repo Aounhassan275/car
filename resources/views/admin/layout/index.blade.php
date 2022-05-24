@@ -58,7 +58,7 @@
 					</li> --}}
 					<li class="sidebar-item {{Request::is('admin/category')?'active':''}}">
 						<a class="sidebar-link" href="{{route('admin.category.index')}}">
-							<i class="align-middle" data-feather="list"></i> <span class="align-middle">Category</span>
+							<i class="align-middle" data-feather="list"></i> <span class="align-middle">Car Make</span>
 						</a>
 					</li>
 					<li class="sidebar-item {{Request::is('admin/car_model')?'active':''}}">

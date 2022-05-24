@@ -3,26 +3,22 @@
 
 <div class="row mb-2 mb-xl-4">
     <div class="col-auto d-none d-sm-block">
-    <h3>Add Car Categories | CARS</h3>
+    <h3>Add Car Make | CARS</h3>
     </div>
 </div>
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title">Add Car Category</h5>
+                <h5 class="card-title">Add Car Make</h5>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{route('admin.category.store')}}" enctype="multipart/form-data">
                    @csrf
                    <div class="row">
                         <div class="form-group col-6">
-                            <label class="form-label">Car Category Name</label>
+                            <label class="form-label">Car Make Name</label>
                             <input type="text" name="name" class="form-control" placeholder="Enter Car Category Name" required>
-                        </div>
-                        <div class="form-group col-6">
-                            <label class="form-label">Car Category Image</label>
-                            <input type="file" name="image" class="form-control" placeholder="Enter Car Category Name" required>
                         </div>
                     </div>
                     <div class="text-right">
@@ -43,8 +39,7 @@
                 <thead>
                     <tr>
                         <th style="width:auto;">Sr No.</th>
-                        <th style="width:auto;">Car Model Name</th>
-                        <th style="width:auto;">Car Model Image</th>
+                        <th style="width:auto;">Car Make Name</th>
                         <th style="width:auto;">Action</th>
                         <th style="width:auto;">Action</th>
                     </tr>
@@ -54,7 +49,6 @@
                     <tr> 
                         <td>{{$key+1}}</td>
                         <td>{{$category->name}}</td>
-                        <td><img src="{{asset($category->image)}}" width="100" height="100"></td>
                         <td class="table-action">
                             <button data-toggle="modal" data-target="#edit_modal" name="{{$category->name}}" 
                                 id="{{$category->id}}" class="edit-btn btn"><i class="align-middle" data-feather="edit-2"></i></button>
