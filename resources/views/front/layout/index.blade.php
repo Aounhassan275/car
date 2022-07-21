@@ -4,6 +4,7 @@
         @yield('title')
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="facebook-domain-verification" content="0iq5xzidv9ivoc3gnlyho6gk9tcvmy" />
 		<link rel="stylesheet" href="{{asset('front/assets/bootstrap/css/bootstrap.min.css')}}" />
 		<link rel="stylesheet" href="{{asset('front/assets/css/main.css')}}" />
 		<noscript><link rel="stylesheet" href="{{asset('front/assets/css/noscript.css')}}" /></noscript>
